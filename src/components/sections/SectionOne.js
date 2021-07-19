@@ -57,13 +57,11 @@ const SectionOne = ({ offsetY }) => {
 			</div>
 			<div className='section-one-text'>
 				<div className='section-one-text-title'>
-					<h2 className='xl-font'>
-						The Age of the Airship May Be Dawning Again
-					</h2>
+					<h2>The Age of the Airship May Be Dawning Again</h2>
 				</div>
 				<div className='section-one-text-about'>
-					<h3 className='md-font'>About Us</h3>
-					<p className='md-font'>
+					<h3>About Us</h3>
+					<p>
 						Our goal is to continue manufacturing the world’s most advanced
 						balloons and airships. We believe that we are more than suppliers;
 						we are partners with our customers and provide them with both the
@@ -74,8 +72,8 @@ const SectionOne = ({ offsetY }) => {
 					</p>
 				</div>
 				<div className='section-one-text-about'>
-					<h3 className='md-font'>Basic information</h3>
-					<p className='md-font'>
+					<h3>Basic information</h3>
+					<p>
 						Company name: Dirizabl <br />
 						Main address: BB <br />
 						Commercial ID No: XXXXXX <br />

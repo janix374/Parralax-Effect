@@ -57,14 +57,6 @@ function SectionTwo({ offsetY }) {
 				<CumulusThree />
 			</Cumulus>
 
-			<Cumulus top={47} left={23}>
-				<CumulusFour />
-			</Cumulus>
-
-			<Cumulus top={52} left={-10}>
-				<CumulusThree />
-			</Cumulus>
-
 			<Cumulus top={67} left={18}>
 				<CumulusTwo />
 			</Cumulus>
@@ -75,14 +67,6 @@ function SectionTwo({ offsetY }) {
 
 			<Cumulus top={83} left={-20}>
 				<CumulusTwo />
-			</Cumulus>
-
-			<Cumulus top={90} left={-19}>
-				<CumulusOne />
-			</Cumulus>
-
-			<Cumulus top={9800} left={300}>
-				<CumulusFour />
 			</Cumulus>
 		</section>
 	);

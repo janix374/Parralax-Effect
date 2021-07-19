@@ -16,6 +16,7 @@
         .section-one-text-title {
             margin-bottom: 500px;
             text-align: center;
+            font-size: 3em;
         }
 
         .section-one-text-about {
@@ -38,7 +39,7 @@
 // section-two
 .section-two {
     width: 100%;
-    height: 10000px;
+    height: 5000px;
     background-color: inherit;
     position: relative;
     overflow: hidden;
@@ -48,21 +49,51 @@
 // section-three
 .section-three {
     width: 100%;
-    height: 15000px;
+    min-height: 5000px;
     background-color: inherit;
     position: relative;
     overflow: hidden;
     z-index: 5;
+
+    .section-three-text{
+        width: 60%;
+        position: relative;
+        margin: 0 auto;
+        
+
+        .article-card {
+            margin-bottom: 200px;
+            margin-top: 100px;
+            border: 1px solid green;
+
+            .article-card-image {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .article-card-title {
+                font-size: 2em;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+   
+
 }
 
 
-// section-four
-.section-four {
-    width: 100%;
-    height: 10000px;
-    background-color: inherit;
-    position: relative;
-    overflow: hidden;
-    z-index: 15;
-    
+
+
+@include breakpint(mobile) {
+    .section-one{
+        .section-one-text {
+
+            .section-one-text-title {
+                font-size: 1em;
+            }
+        }
+    }
 }

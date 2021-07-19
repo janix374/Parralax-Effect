@@ -1,0 +1,63 @@
+.dasboard-sky{
+    background: linear-gradient(to bottom, #67d1fb 0%, #9be2fe 100%);
+    min-height: 100vh;
+
+    .dashboard-container {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+    }
+
+}
+
+   //Articles card    
+    .article-view-card {
+        border: 1px solid black;
+        width: 80%;
+        margin: 0 auto 100px auto;
+        overflow: hidden;
+
+        .article-view-card-title {
+            margin: 0 auto;
+            padding: 2%;
+        }
+        .article-view-card-created{
+            padding: 30px; 
+        }
+        .article-view-card-content {
+            padding: 30px;
+        }
+        .article-view-card-button {
+            display: flex;
+            flex-direction: row;
+            justify-content:flex-end;
+        }
+    }
+
+//Article created
+.article-create-sky {
+    background: linear-gradient(to bottom, #67d1fb 0%, #9be2fe 100%);
+    min-height: 100vh;
+
+    .article-create-form-container{
+        width: 80%;
+        margin:  0 auto;
+        padding: 100px 0px 100px 0px;
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            // background-color: white;
+
+            .article-create-form-group {
+                margin-top: 50px;
+                padding: 50px;
+            }
+        }
+    }
+}
+

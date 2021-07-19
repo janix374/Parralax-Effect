@@ -3,7 +3,6 @@ import Airship from '../airship/Airship';
 import SectionOne from '../sections/SectionOne';
 import SectionTwo from '../sections/SectionTwo';
 import SectionThree from '../sections/SectionThree';
-import SectionFour from '../sections/SectionFour';
 
 const Sky = () => {
 	const [offsetY, setOffsetY] = useState(0);
@@ -19,8 +18,7 @@ const Sky = () => {
 			<Airship offsetY={offsetY} />
 			<SectionOne offsetY={offsetY} />
 			<SectionTwo offsetY={offsetY} />
-			<SectionThree offsetY={offsetY} />
-			<SectionFour offsetY={offsetY} />
+			<SectionThree />
 		</div>
 	);
 };

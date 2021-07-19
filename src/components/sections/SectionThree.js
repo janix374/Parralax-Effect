@@ -3,24 +3,27 @@ import Cumulus from '../clouds/Cumulus';
 import { CumulusThree, CumulusFive } from '../clouds/clouds';
 import PropTypes from 'prop-types';
 
-const SectionThree = ({ offsetY }) => {
-	const sectionThreeRef = useRef();
-	const rightMove = offsetY;
-
+const SectionThree = () => {
 	return (
-		<section className='section-three' ref={sectionThreeRef}>
-			<Cumulus top={30} left={-15}>
-				<CumulusThree />
-			</Cumulus>
-			<Cumulus top={52} left={-10}>
-				<CumulusFive />
-			</Cumulus>
-			<Cumulus top={59} left={-35}>
-				<CumulusFive />
-			</Cumulus>
-			<Cumulus top={70} left={29}>
-				<CumulusThree />
-			</Cumulus>
+		<section className='section-three'>
+			<div className='section-three-text'>
+				<div className='section-one-text-title'>
+					<h2>Air-Ship Articles</h2>
+				</div>
+
+				<div className='article-card'>
+					<div className='article-card-image'>
+						<img
+							src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/1200px-Fronalpstock_big.jpg'
+							alt='pics'
+						/>
+					</div>
+					<div className='article-card-title'>
+						<h3>About Us</h3>
+					</div>
+					<div className='article-card-content'>Content</div>
+				</div>
+			</div>
 		</section>
 	);
 };
