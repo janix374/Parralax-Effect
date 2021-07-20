@@ -3,25 +3,35 @@ import Sky from './mainfile/Sky';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AdminDashboard from './admin/AdminDashboard';
 import ArticleCreate from './admin/ArticleCreate';
+import AdminLogin from '../components/admin/AdminLogin';
+import AuthProvider from '../contexts/AuthContext';
+import PrivateRoute from './admin/PrivateRoute';
 
 const AppContainer = () => {
 	return (
 		<div>
 			<Router>
-				<Switch>
-					<Route path='/' exact>
-						<Sky />
-					</Route>
-					<Route path='/dashboard' exact>
-						<AdminDashboard />
-					</Route>
-					<Route path='/dashboard/article' exact>
-						<ArticleCreate />
-					</Route>
-					<Route path='/dashboard/article/:id' exact>
-						<ArticleCreate />
-					</Route>
-				</Switch>
+				<AuthProvider>
+					<Switch>
+						<Route path='/' exact>
+							<Sky />
+						</Route>
+						<PrivateRoute path='/dashboard' exact component={AdminDashboard} />
+						<PrivateRoute
+							path='/dashboard/article'
+							exact
+							component={ArticleCreate}
+						/>
+						<PrivateRoute
+							path='/dashboard/article/:id'
+							exact
+							component={ArticleCreate}
+						/>
+						<Route path='/login' exact>
+							<AdminLogin />
+						</Route>
+					</Switch>
+				</AuthProvider>
 			</Router>
 		</div>
 	);

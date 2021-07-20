@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import firebase from '../config/firebase';
 import ArticleView from './ArticleView';
 import { Link } from 'react-router-dom';
+import LoadingComponent from '../common/LoadingComponent';
+import articlePics from '../../images/article.png';
+import { Button } from '@material-ui/core';
+import firebase from '../../config/firebase';
+import { useAuth } from '../../contexts/AuthContext';
+import { useHistory } from 'react-router';
 
 const db = firebase.firestore();
 
-const Dashboard = () => {
+const AdminDashboard = () => {
 	const [articles, setArticles] = useState([]);
-	const [isLoaded, setIsLoaded] = useState(false);
+	const [error, setError] = useState('');
+	const { currentUser, logout } = useAuth();
+	const history = useHistory();
 
 	const getMyArticles = () => {
 		db.collection('Articles')
@@ -23,7 +30,6 @@ const Dashboard = () => {
 						};
 						allArticles.push(article);
 					});
-					setIsLoaded(true);
 					setArticles(allArticles);
 				}
 			});
@@ -43,26 +49,52 @@ const Dashboard = () => {
 			});
 	};
 
+	const handleLogOut = async () => {
+		setError('');
+		try {
+			await logout();
+			history.push('/');
+		} catch (error) {
+			setError('Fail to log out');
+		}
+	};
+
 	useEffect(() => {
 		getMyArticles();
 	}, []);
 
-	console.log(articles);
+	console.log(currentUser);
 
 	return (
 		<div className='dasboard-sky'>
-			<Link to={`/dashboard/article/`}>link</Link>
+			<div className='profile-link'>
+				<Button color='primary' onClick={handleLogOut}>
+					LogOut
+				</Button>
+			</div>
+			<div className='article-link'>
+				<Button>
+					<Link to={`/dashboard/article/`}>
+						<img src={articlePics} alt='New Article' title='New Article' />
+					</Link>
+				</Button>
+			</div>
+
 			<div className='dashboard-container'>
-				{articles.map((item) => {
-					return (
-						<div key={item.id}>
-							<ArticleView article={item} handleDelete={handleDelete} />
-						</div>
-					);
-				})}
+				{articles.length ? (
+					articles.map((item) => {
+						return (
+							<div key={item.id}>
+								<ArticleView article={item} handleDelete={handleDelete} />
+							</div>
+						);
+					})
+				) : (
+					<LoadingComponent />
+				)}
 			</div>
 		</div>
 	);
 };
 
-export default Dashboard;
+export default AdminDashboard;

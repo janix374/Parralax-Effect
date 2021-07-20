@@ -2,6 +2,16 @@
     background: linear-gradient(to bottom, #67d1fb 0%, #9be2fe 100%);
     min-height: 100vh;
 
+    .profile-link {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .article-link {
+        text-align: center;
+        padding-top: 150px;
+    }
+
     .dashboard-container {
         width: 80%;
         margin: 0 auto;
@@ -14,10 +24,10 @@
 
    //Articles card    
     .article-view-card {
-        border: 1px solid black;
         width: 80%;
         margin: 0 auto 100px auto;
         overflow: hidden;
+        border-top: 1px solid black;
 
         .article-view-card-title {
             margin: 0 auto;

@@ -1,6 +1,9 @@
 import React from 'react';
 import parse from 'html-react-parser';
 import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
+import editPics from '../../images/edit.png';
+import delPics from '../../images/delete.png';
 
 const ArticleView = ({ article, handleDelete }) => {
 	const date1 = article.createDate.toDate().toDateString();
@@ -20,12 +23,16 @@ const ArticleView = ({ article, handleDelete }) => {
 				</div>
 				<div className='article-view-card-button'>
 					<div>
-						<button>
-							<Link to={`/dashboard/article/${article.id}`}>Edit</Link>
-						</button>
+						<Button>
+							<Link to={`/dashboard/article/${article.id}`}>
+								<img src={editPics} alt='edit' title='Edit' />
+							</Link>
+						</Button>
 					</div>
 					<div>
-						<button onClick={() => handleDelete(article.id)}>DELETE</button>
+						<Button onClick={() => handleDelete(article.id)}>
+							<img src={delPics} alt='delete' title='Delete' />
+						</Button>
 					</div>
 				</div>
 			</div>
