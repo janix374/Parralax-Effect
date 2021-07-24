@@ -75,7 +75,7 @@ const AdminLogin = () => {
 						<form onSubmit={handleSubmit}>
 							<h2 className='my-3'>Log in</h2>
 							<p className='my-3'>
-								email: airship@yahoo <br />
+								email: airship@yahoo.com <br />
 								password: 123456
 							</p>
 							<FormGroup>

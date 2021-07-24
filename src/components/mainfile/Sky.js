@@ -8,6 +8,7 @@ import Birds from '../parallaxobject/Birds';
 import Balloon from '../parallaxobject/Balloon';
 import Zeppelin from '../parallaxobject/Zeppelin';
 import SectionFour from '../sections/SectionFour';
+import ZeppelinTwo from '../parallaxobject/ZeppelinTwo';
 
 const Sky = ({ articles, handleLimit, limit, error }) => {
 	return (
@@ -17,6 +18,7 @@ const Sky = ({ articles, handleLimit, limit, error }) => {
 			<Birds topOffSet={9000} />
 			<Balloon topOffSet={5000} />
 			<Zeppelin topOffSet={6500} />
+			<ZeppelinTwo topOffSet={8000} />
 			<SectionOne />
 			<SectionTwo />
 			<SectionThree

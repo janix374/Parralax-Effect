@@ -34,7 +34,7 @@ const TextForSectionOne = () => {
 					in the marketplace at Annonay. Their balloon (called a Montgolfiere)
 					lifted 6,562 feet into the air.
 				</p>
-				<div className='text-center my-2'>
+				<div className='text-center my-2 pisc-box-shadow'>
 					<img src={pics1} alt='airship' />
 				</div>
 				<p>Hydrogen Balloon with Flapping Devices</p>
@@ -68,7 +68,7 @@ const TextForSectionOne = () => {
 					This machine, designated the SC-1, was the Army's first powered
 					aircraft.
 				</p>
-				<div className='text-center my-2'>
+				<div className='text-center my-2 pisc-box-shadow'>
 					<img src={pics4} alt='airship' />
 				</div>
 				<p>Who Was Ferdinand Zeppelin?</p>
@@ -82,7 +82,7 @@ const TextForSectionOne = () => {
 					tethered test at Templehof near Berlin, Germany, however, the airship
 					crashed.
 				</p>
-				<div className='text-center my-2'>
+				<div className='text-center my-2 pisc-box-shadow'>
 					<img src={pics2} alt='airship' />
 				</div>
 				<p>The Nonrigid Airship and Semirigid Airship</p>
@@ -111,7 +111,7 @@ const TextForSectionOne = () => {
 					could reach sizes that made it useful for carrying passengers and
 					cargo.
 				</p>
-				<div className='text-center my-2'>
+				<div className='text-center my-2 pisc-box-shadow'>
 					<img src={pics3} alt='airship' />
 				</div>
 			</div>

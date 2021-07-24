@@ -7,7 +7,7 @@ const SectionThree = ({ articles, handleLimit, limit, error }) => {
 	const timestamp = (ts) => {
 		const date = new Date(ts * 1000);
 		return (
-			date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
+			date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
 		);
 	};
 
@@ -41,12 +41,12 @@ const SectionThree = ({ articles, handleLimit, limit, error }) => {
 									<div className='section-three-article-card-title'>
 										<h3>{item.title}</h3>
 									</div>
-									<div className='section-three-article-card-created'>
-										<span>{timestamp(item.createDate.seconds)}</span>
-										<span>{timestampminut(item.createDate.seconds)}</span>
-									</div>
 									<div className='section-three-article-card-content'>
 										{parse(item.content)}
+									</div>
+									<div className='section-three-article-card-created'>
+										<span>{timestamp(item.createDate.seconds)}</span>
+										{/* <span>{timestampminut(item.createDate.seconds)}</span> */}
 									</div>
 								</div>
 							</div>

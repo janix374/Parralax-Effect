@@ -5,9 +5,10 @@
     top: 100px;
     left: 50px;
     z-index: 10;
+    display: block;
 
     img {
-        width: 40%;
+        width: 15%;
         height: auto;
         animation-name: swinging;
         animation-duration: 10s;
@@ -25,11 +26,12 @@
 }
 
 .parallax-object-airship-button {
-    width: 100px;
+    width: 80px;
     position: fixed;
-    top: 400px;
+    top: 300px;
     z-index: 50;
     cursor: pointer;
+    display: block;
 
     img {
         width: 100%;
@@ -44,6 +46,7 @@
     // top: 9000px;
     left: -200px;
     width: 100%;
+    display: block;
 
     img {
         transform: rotateX(20deg);
@@ -68,6 +71,7 @@
     position: absolute;
     width: 100%;
     text-align: center;
+    display: block;
 
     img {
         width: 15%;
@@ -91,11 +95,34 @@
     position: absolute;
     width: 100%;
     right: 0px;
+    display: block;
 
     img {
         width: 20%;
         height: auto;
         float: right;
     }
+}
 
+//zeppelin two
+.parallax-object-zeppelin-two {
+    z-index: 55;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    display: block;
+
+    img {
+        width: 20%;
+        height: auto;
+    }
+}
+
+
+// other device
+@include breakpint(tablet) {
+    .parallax-object-airship, .parallax-object-airship-button, .parallax-object-balloon, 
+    .parallax-object-zeppelin, .parallax-object-birds, .parallax-object-zeppelin-two {
+        display: none;
+    }
 }

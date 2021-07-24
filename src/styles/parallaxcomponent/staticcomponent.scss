@@ -19,6 +19,13 @@
             margin-top: 50px;
             text-align: justify;
         }
+
+        .pisc-box-shadow {
+           img {
+            -webkit-box-shadow: 11px 12px 24px 11px #576262; 
+            box-shadow: 11px 12px 24px 11px #576262;
+           }
+        }
     }
   
 }
